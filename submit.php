@@ -20,7 +20,8 @@
 			$j=$bbb[0];
 				if($j=="http" || $j=="https")
 				{		
-					?> <div id="card2" z-default='20'><a href="<?php echo $show ?>"><?php echo $show ?></a> </div> <br>  <?php 
+					?>
+					<div id="card2" z-default='20'><iframe src="<?php echo $show ?>"></iframe><br><a href="<?php echo $show ?>"><?php echo $show ?></a> </div> <br>  <?php 
 				}
 				else if($i=="www")
 				{
