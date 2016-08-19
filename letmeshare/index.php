@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>  
-	<title>Let's Share</title>
+	<title>Let me Share</title>
 	<script src="../../ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="js/jquery-2.2.0.js"></script>
 	  <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
@@ -59,7 +59,7 @@
 	    </div>
     </div>
     <div id="card1" z-default='20'>
-	Loading Chat.....
+	Loading Chat...
     </div>
 
 </body>
