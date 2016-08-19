@@ -25,7 +25,7 @@
 				}
 				else if($i=="www")
 				{
-					?> <div id="card2" z-default='20'><a href="<?php echo "http://".$show ?>"><?php echo $show ?></a> </div> <br>  <?php
+					?> <div id="card2" z-default='20'><iframe src="<?php echo $show ?>"></iframe><br><a href="<?php echo "http://".$show ?>"><?php echo $show ?></a> </div> <br>  <?php
 				}
 				else{
 				?> <div id="card2" z-default='20'> <?php echo $res['inp']; ?> </div> <br>  <?php
