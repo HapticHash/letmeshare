@@ -13,7 +13,7 @@
 		$query=mysqli_query($con,"SELECT * from lms ORDER BY ID DESC");
 		while($res=mysqli_fetch_assoc($query))
 		{
-			?> <div id="card2" z-default='20'> <?php echo $res['inp']; ?> </div>   <?php
+			?> <div id="card2" z-default='20'> <?php echo $res['inp']; ?> </div> <br>  <?php
 		}
 	}
 ?>

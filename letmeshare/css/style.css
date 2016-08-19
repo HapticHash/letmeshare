@@ -1,80 +1,49 @@
 body{
 	height: auto;
 	width: 800px;
-	margin-left:350px;
+	//margin-left:350px;
 	font-family: sans-serif;
 	font-size: 18px;
 	margin-top: 10px;
-
-
-background: #ED4264; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #ED4264 , #FFEDBC); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #ED4264 , #FFEDBC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
-}
-
-h1 {
-	text-align: center;
-	font-weight: 500;
-	font-size: 50px;
-	font-family: 
-	background: -webkit-linear-gradient(#4DD0E1, #00B0FF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+	background: #ED4264; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #ED4264 , #FFEDBC); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #ED4264 , #FFEDBC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */		
 }
 
 img {
 	margin-left: 250px;
 	width: 300px;
-	
 }
 
 .card {
-
 	background-color: #fff;
-	opacity: 0.98;
-    display: block;
     margin-top: 5%;
     height: 300px;
     border-radius: 8px;
-    width: 800px;
-    transition: box-shadow 0.15s;
     border-bottom: 1px solid rgb(170, 170, 170);
     padding: 10px;
     box-shadow: rgb(85, 85, 85) 0px 4px 6.66667px;
+	margin-left:35%;
+	width:100%;
 }
 
 #card1 {
-
-    display: block;
     margin-top: 5%;
-    margin-left: 0%;
+    margin-left: 35%;
     height: auto;
-    width: 800px;
+    width:100%;
     padding: 10px;
+	//background-color:#336699;
 }
 
 #card2 {
-
 	background-color: #fff;
-	opacity: 0.98;
-    display: block;
+    display:inline-block;
     margin-top: 5%;
-    height: auto;
     border-radius: 8px;
-    width: auto;
-    transition: box-shadow 0.15s;
     border-bottom: 1px solid rgb(170, 170, 170);
     padding: 10px;
     box-shadow: rgb(85, 85, 85) 0px 4px 6.66667px;
-}
-
-#form {
-          
-    height: 400px;
-    width: 800px;
-    border-color: black;
-    border-width: 5px;  
 }
 
 #form input {
@@ -88,97 +57,70 @@ img {
 }
 
 #form input:focus {
-	width: 100px;
-	outline: none;
-	text-align: center;
 	border-bottom: 2px solid blue;
 }
-
-.button {
-	border-radius: 12px;
-	margin-top: 20px;
-	height: 50px;
-	width: 120px;
-	color: #fff;
-	background-color: #03A9F4;
-}
-
-/* form starting stylings ------------------------------- */
-.group 			  { 
+.group{ 
   position:relative; 
   margin-bottom:45px; 
 }
-input 				{
-  font-size:18px;
-  padding:10px 10px 10px 5px;
-  display:block;
-  width:300px;
-  border:none;
-  border-bottom:1px solid #757575;
-}
-input:focus 		{ outline:none; }
-
-/* LABEL ======================================= */
-label 				 {
+label {
   color:#999; 
   font-size:18px;
   font-weight:normal;
   position:absolute;
   text-align: center;
-  pointer-events:none;
   left: 350px;
   top: 20px;
   transition:0.2s ease all; 
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
 }
-
-/* active state */
-input:focus ~ label, input:valid ~ label 		{
+input:focus ~ label, input:valid ~ label{
   top:-10px;
   font-size:14px;
-  color:#5264AE;
 }
-
-
-/* active state */
-input:focus ~ .bar:before, input:focus ~ .bar:after {
-  width:50%;
+.btn{
+	width:100px;
+	border:none;
+	background-color:deepskyblue;
+	color:white;
+	padding:10px;
+	transition: all 0.2s;
+	cursor:pointer;
+	
 }
-
-/* HIGHLIGHTER ================================== */
-.highlight {
-  position:absolute;
-  height:60%; 
-  width:600px; 
-  top:25%; 
-  left:100px;
-  pointer-events:none;
-  opacity:0.5;
+.btn:hover
+{
+	padding-right:25px;
+	animation-name:border;
+	animation-duration:4s;
 }
-
-/* active state */
-input:focus ~ .highlight {
-  -webkit-animation:inputHighlighter 0.3s ease;
-  -moz-animation:inputHighlighter 0.3s ease;
-  animation:inputHighlighter 0.3s ease;
+@keyframes border {
+    0%   {border-left: blue;}
+    25%  {border-bottom: blue;}
+    50%  {border-right: blue;}
+    100% {border-top: blue;}
 }
-
-/* ANIMATIONS ================ */
-@-webkit-keyframes inputHighlighter {
-	from { background:#5264AE; }
-  to 	{ width:0; background:transparent; }
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
-@-moz-keyframes inputHighlighter {
-	from { background:#5264AE; }
-  to 	{ width:0; background:transparent; }
+.btn span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  color:#fff;
+  right: -30px;
+  transition: 0.5s;
 }
-@keyframes inputHighlighter {
-	from { background:#5264AE; }
-  to 	{ width:0; background:transparent; }
+.btn:hover span:after {
+  opacity: 1;
+  right: -15px;
 }
-
-/* Button On Hover ================================ */
+/* Button On Hover ================================ 
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,900);
 * {
   box-sizing: inherit;
@@ -258,6 +200,4 @@ input:focus ~ .highlight {
   stroke-dashoffset: 48;
   -webkit-transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-
+}*/

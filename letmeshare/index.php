@@ -41,21 +41,9 @@
 		      <span class="bar"></span>
 		      <label> Enter Here... </label>
 		    </div>
+			 <button onclick="insert()" class="btn"><span>Post It </span></button>
 		    </center>
-         
-		    <section class="buttons">
-			  <div class="container">
-			    <div class="btn btn-1"> 
-			      <svg>
-			        <rect x="0" y="0" fill="none" width="100%" height="100%"/>
-			      </svg>
-			      <input type="submit" onclick="insert()" class="btn btn-1" name="postit" value="Post it >>">
-			    </div>
-			  </div> 
-			</section>
-
-
-            <center>  </> </center>	
+				
 	    </div>
     </div>
     <div id="card1" z-default='20'>
