@@ -1,34 +1,48 @@
 body{
 	height: auto;
-	width: 60%;
 	font-family: sans-serif;
 	font-size: 18px;
-	margin-top: 10px;
+	margin:0px;
 	background: #ED4264; /* fallback for old browsers */
 	background: -webkit-linear-gradient(to left, #ED4264 , #FFEDBC); /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to left, #ED4264 , #FFEDBC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */		
 }
-
-img {
-	margin-left: 33%;
-	width: 35%;
+.group{
+	float:right;
+	margin-right:10%;
+	height:80px;
+	margin-top:20px;
+	width:53%;
 }
-
+img {
+	width: 30%;
+	float:left;
+}
+#navbar{
+	display:none;
+	background-color:#FFF;
+	padding:20px;
+	position:fixed;
+	top:0;
+	width:100%;
+	margin-bottom:20px;
+	border-bottom:2px solid #000;
+}
 .card {
 	background-color: #fff;
     margin-top: 5%;
-    height: 300px;
     border-radius: 8px;
     border-bottom: 1px solid rgb(170, 170, 170);
     padding: 10px;
     box-shadow: rgb(85, 85, 85) 0px 4px 6.66667px;
-	margin-left:35%;
-	width:100%;
+	margin-left:20%;
+	width:60%;
+	height:100px;
 }
 
 #card1 {
     margin-top: 5%;
-    margin-left: 35%;
+	margin-left: 20%;
     height: auto;
     width:100%;
     padding: 10px;
@@ -37,7 +51,7 @@ img {
 #card2 {
 	background-color: #fff;
     display:inline-block;
-    margin-top: 5%;
+    margin-top: 2%;
     border-radius: 8px;
     border-bottom: 1px solid rgb(170, 170, 170);
     padding: 10px;
@@ -45,39 +59,24 @@ img {
 }
 
 #form input {
-	-webkit-animation-duration: all 0.30s ease-in-out;
-	outline:none;
-	width: 100px;
-	border: none;
-	text-align: center;
-	font-size: 15px;
-	border-bottom: 2px solid #AAA;
+	width:50%;
+	text-align:center;
+	border:none;
+	border-bottom:2px solid #AAA;
+	-webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
 }
 
 #form input:focus {
-	border-bottom: 2px solid blue;
-}
-.group{ 
-  position:relative; 
-  margin-bottom:45px; 
-}
-label {
-  color:#999; 
-  font-size:18px;
-  font-weight:normal;
-  position:absolute;
-  text-align: center;
-  left: 45%;
-  top: 20%;
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
-}
-input:focus ~ label, input:valid ~ label{
-  top:-10px;
-  font-size:14px;
+	outline:none;
+	text-align:center;
+	border-bottom:2px solid purple;
+	width:70%;
 }
 .btn{
+	float:right;	
 	width:100px;
 	border:none;
 	background-color:deepskyblue;
@@ -85,7 +84,7 @@ input:focus ~ label, input:valid ~ label{
 	padding:10px;
 	transition: all 0.2s;
 	cursor:pointer;
-	
+	margin-left:20px;
 }
 .btn:hover
 {

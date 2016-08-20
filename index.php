@@ -9,6 +9,39 @@
 
     <link rel="stylesheet" type="text/css" href="css/style.css" >
 	<script>
+		
+	
+		$(window).scroll(function(){
+			/*if($(window).scrollTop()<200 && $(window).scrollTop()>150)
+			{
+				window.scrollBy(0,200);
+			}
+			else if($(window).scrollTop()>250 && $(window).scrollTop()<300)
+			{
+				window.scrollBy(0,-350);
+			}*/
+			if($(window).scrollTop()>70)
+			{
+				$(".card").css("margin-left","0");
+				$(".card").css("margin-top","0%");
+				$(".card").css("width","100%");
+				$(".card").css("top","0");
+				$(".card img").css("width","20%");
+				$(".card").css("position","fixed");
+				$("body").css("margin-top","250px");
+				
+				
+			}
+			if($(window).scrollTop()<20)
+			{
+				$(".card").css("margin-left","20%");
+				$(".card").css("margin-top","5%");
+				$(".card").css("width","60%");
+				$(".card").css("position","relative");
+				$("body").css("margin-top","0px");
+				$(".card img").css("width","30%");
+			}
+		});
 		function insert()
 		{
 			var msg=document.getElementById('inp').value;
@@ -29,20 +62,17 @@
 
 </head>
 
-<body onload="javascript:getit()">
-
+<body onload="javascript:update()">
 	<div class="card" z-default='20'>
-    <br><img src="images/logo1.png"> <br> <br>
+    <br>
        <div id="form">
-       		<center>
-		    <div class="group">      
-		      <input type="text" required onkeypress="if(event.keyCode == 13)insert();" name="inp" id="inp" style=" height: 40px; width: 600px;" autofocus>
-		      <span class="highlight"></span>
-		      <span class="bar"></span>
-		      <label> Enter Here... </label>
+			<img src="images/logo1.png">
+		    <div class="group">  
+				<input type="text" required placeholder="Enter link here" onkeypress="if(event.keyCode == 13)insert();" name="inp" id="inp" style=" height: 40px;" autofocus>
+				<button onclick="insert()" class="btn"><span>Post It </span></button>
 		    </div>
-			 <button onclick="insert()" class="btn"><span>Post It </span></button>
-		    </center>
+			
+		   
 				
 	    </div>
     </div>
