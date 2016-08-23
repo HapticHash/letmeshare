@@ -1,0 +1,40 @@
+<script>
+ 
+function copyfieldvalue(e, id){
+    var field = document.getElementById(id)
+    field.focus()
+    field.setSelectionRange(0, field.value.length)
+    var copysuccess = copySelectionText()
+    if (copysuccess){
+        showtooltip(e)
+    }
+}
+ function copySelectionText(){
+    var copysuccess // var to check whether execCommand successfully executed
+    try{
+        copysuccess = document.execCommand("copy") // run command to copy selected text to clipboard
+    } catch(e){
+        copysuccess = false
+    }
+    return copysuccess
+}document.body.addEventListener('mouseup', function(){
+    var selected = getSelectionText() // call <a href="#getselectiontext">getSelectionText()</a> to see what was selected
+    if (selected.length > 0){ // if selected text length is greater than 0
+        var copysuccess = copySelectionText() // copy user selected text to clipboard
+    }
+}, false)createtooltip() // create tooltip by calling it ONCE per page. See "Note" below
+var buddhaquote = document.getElementById('buddhaquote')
+buddhaquote.addEventListener('mouseup', function(e){
+    var selected = getSelectionText() // call getSelectionText() to see what was selected
+    if (selected.length > 0){ // if selected text length is greater than 0
+        var copysuccess = copySelectionText() // copy user selected text to clipboard
+        showtooltip(e)
+    }
+}, false)
+</script>
+ 
+<fieldset style="max-width:600px">
+    <legend>Share this tutorial</legend>
+    <input id="url" type="text" size="60" value="http://www.javascriptkit.com/javatutors/copytoclipboard.shtml" /> 
+    <a href="#" onClick="copyfieldvalue(event, 'url');return false">Copy</a>
+</fieldset>
